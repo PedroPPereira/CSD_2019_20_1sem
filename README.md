@@ -19,7 +19,6 @@
 ### Petri Net
 
 <details>
- <summary>PetriNet</summary>
 
 ![PetriNet](https://user-images.githubusercontent.com/46992334/193144408-189590ab-f923-4981-abb4-823f4750bd44.png)
 
@@ -30,21 +29,21 @@
 ### Demo
 
 <details>
- <summary>CarParkStart</summary>
+ <summary>Car park start</summary>
 
 ![CarParkStart](https://user-images.githubusercontent.com/46992334/193144412-acbe1144-c648-4b19-810a-71a78352a8d9.jpg)
 
 </details>
 
 <details>
- <summary>CarParkWith10Cars</summary>
+ <summary>Car park with 10 cars</summary>
 
 ![CarParkWith10Cars](https://user-images.githubusercontent.com/46992334/193144413-b127f5e1-bc2e-4715-92bd-3763788cb74f.jpg)
 
 </details>
 
 <details>
- <summary>CarParkWithConcurrentActions</summary>
+ <summary>Car park with concurrent actions</summary>
 
 ![CarParkWithConcurrentActions](https://user-images.githubusercontent.com/46992334/193144406-374036ce-451f-48fd-b739-c9c6a773a923.jpg)
 
