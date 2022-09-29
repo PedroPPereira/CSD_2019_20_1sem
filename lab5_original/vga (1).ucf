@@ -1,0 +1,23 @@
+NET "CLK" LOC ="T9";
+NET "RESET" LOC = "L14";
+
+NET "RGB<0>" LOC = "R11";
+NET "RGB<1>" LOC = "T12";
+NET "RGB<2>" LOC = "R12";
+
+NET "HS" LOC = "R9";
+NET "VS" LOC = "T10";
+
+NET "sel<0>" LOC = "J13";
+NET "sel<1>" LOC = "K14";
+NET "sel<2>" LOC = "K13";
+
+NET "value<0>" LOC = "F12";
+NET "value<1>" LOC = "G12";
+NET "value<2>" LOC = "H14";
+
+NET "ld0" LOC = "K12";
+NET "ld1" LOC = "P14";
+NET "ld2" LOC = "L12";
+NET "ld3" LOC = "N14";
+NET "ld4" LOC = "P13";

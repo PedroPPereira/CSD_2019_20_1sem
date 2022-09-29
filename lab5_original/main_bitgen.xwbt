@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/sl/Desktop/lab5_park/main.ncd
+OUTFILE=/home/sl/Desktop/lab5_park/main.bit
+FAMILY=Spartan3
+PART=xc3s200-4ft256
+WORKINGDIR=/home/sl/Desktop/lab5_park
+LICENSE=WebPack
+USER_INFO=210809169_0_0_133

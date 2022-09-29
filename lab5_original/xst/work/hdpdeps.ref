@@ -1,0 +1,27 @@
+V3 14
+FL /home/sl/Desktop/lab5_park/binary_to_bcd.vhd 2019/12/14.15:35:46 P.20131013
+PH work/BCD_package 1576400701 FL /home/sl/Desktop/lab5_park/binary_to_bcd.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PB ieee/std_logic_arith 1381692177 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+PB work/BCD_package 1576400702 \
+      FL /home/sl/Desktop/lab5_park/binary_to_bcd.vhd PH work/BCD_package 1576400701
+FL "/home/sl/Desktop/lab5_park/Debounce .vhd" 2019/12/15.09:04:52 P.20131013
+EN work/Debounce 1576400705 FL "/home/sl/Desktop/lab5_park/Debounce .vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/Debounce/Behavioral 1576400706 \
+      FL "/home/sl/Desktop/lab5_park/Debounce .vhd" EN work/Debounce 1576400705
+FL /home/sl/Desktop/lab5_park/main.vhd 2019/12/15.09:04:52 P.20131013
+EN work/main 1576400707 FL /home/sl/Desktop/lab5_park/main.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PB ieee/std_logic_arith 1381692177 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB work/BCD_package 1576400702
+AR work/main/Behavioral 1576400708 \
+      FL /home/sl/Desktop/lab5_park/main.vhd EN work/main 1576400707 CP Parque \
+      CP Debounce
+FL /home/sl/Desktop/lab5_park/Parque_antigo_controller.vhdl 2019/12/14.15:35:50 P.20131013
+EN work/Parque 1576400703 \
+      FL /home/sl/Desktop/lab5_park/Parque_antigo_controller.vhdl \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179 PB ieee/NUMERIC_STD 1381692181
+AR work/Parque/Structural 1576400704 \
+      FL /home/sl/Desktop/lab5_park/Parque_antigo_controller.vhdl EN work/Parque 1576400703

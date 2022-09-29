@@ -1,0 +1,8 @@
+PB bcd_package bcd_package /home/sl/Desktop/lab5_park/binary_to_bcd.vhd sub00/vhpl05 1576400702
+AR parque structural /home/sl/Desktop/lab5_park/Parque_antigo_controller.vhdl sub00/vhpl01 1576400704
+AR debounce behavioral "/home/sl/Desktop/lab5_park/Debounce .vhd" sub00/vhpl07 1576400706
+AR main behavioral /home/sl/Desktop/lab5_park/main.vhd sub00/vhpl03 1576400708
+EN debounce NULL "/home/sl/Desktop/lab5_park/Debounce .vhd" sub00/vhpl06 1576400705
+EN main NULL /home/sl/Desktop/lab5_park/main.vhd sub00/vhpl02 1576400707
+PH bcd_package NULL /home/sl/Desktop/lab5_park/binary_to_bcd.vhd sub00/vhpl04 1576400701
+EN parque NULL /home/sl/Desktop/lab5_park/Parque_antigo_controller.vhdl sub00/vhpl00 1576400703

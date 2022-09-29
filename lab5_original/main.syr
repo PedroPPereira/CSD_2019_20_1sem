@@ -1,0 +1,1180 @@
+Release 14.7 - xst P.20131013 (lin)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.02 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.02 secs
+ 
+--> 
+Reading design: main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/sl/Desktop/lab5_park/binary_to_bcd.vhd" in Library work.
+Package <bcd_package> compiled.
+Package body <bcd_package> compiled.
+Compiling vhdl file "/home/sl/Desktop/lab5_park/Parque_antigo_controller.vhdl" in Library work.
+Entity <parque> compiled.
+Entity <parque> (Architecture <structural>) compiled.
+Compiling vhdl file "/home/sl/Desktop/lab5_park/Debounce .vhd" in Library work.
+Entity <debounce> compiled.
+Entity <debounce> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/home/sl/Desktop/lab5_park/main.vhd" in Library work.
+Entity <main> compiled.
+Entity <main> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <main> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Parque> in library <work> (architecture <structural>).
+
+Analyzing hierarchy for entity <Debounce> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <main> in library <work> (Architecture <behavioral>).
+WARNING:Xst:790 - "/home/sl/Desktop/lab5_park/main.vhd" line 379: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/home/sl/Desktop/lab5_park/main.vhd" line 380: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/home/sl/Desktop/lab5_park/main.vhd" line 381: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/home/sl/Desktop/lab5_park/main.vhd" line 382: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/home/sl/Desktop/lab5_park/main.vhd" line 383: Index value(s) does not match array range, simulation mismatch.
+Entity <main> analyzed. Unit <main> generated.
+
+Analyzing Entity <Parque> in library <work> (Architecture <structural>).
+INFO:Xst:2679 - Register <p_1176> in unit <Parque> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <Parque> analyzed. Unit <Parque> generated.
+
+Analyzing Entity <Debounce> in library <work> (Architecture <behavioral>).
+Entity <Debounce> analyzed. Unit <Debounce> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Parque>.
+    Related source file is "/home/sl/Desktop/lab5_park/Parque_antigo_controller.vhdl".
+    Found 6-bit register for signal <p1>.
+    Found 6-bit register for signal <p2>.
+    Found 6-bit register for signal <p3>.
+    Found 6-bit register for signal <p4>.
+    Found 6-bit register for signal <p5>.
+    Found 32-bit adder for signal <new_value$addsub0000>.
+    Found 32-bit adder for signal <new_value$addsub0001>.
+    Found 32-bit adder for signal <new_value$addsub0002>.
+    Found 32-bit adder for signal <new_value$addsub0003>.
+    Found 32-bit adder for signal <new_value$addsub0004>.
+    Found 32-bit adder for signal <new_value$addsub0005>.
+    Found 32-bit adder for signal <new_value$addsub0006>.
+    Found 32-bit adder for signal <new_value$addsub0007>.
+    Found 32-bit comparator less for signal <new_value$cmp_gt0000> created at line 944.
+    Found 32-bit comparator less for signal <new_value$cmp_gt0001> created at line 953.
+    Found 32-bit comparator less for signal <new_value$cmp_gt0002> created at line 1014.
+    Found 32-bit comparator less for signal <new_value$cmp_gt0003> created at line 979.
+    Found 32-bit comparator less for signal <new_value$cmp_gt0004> created at line 1023.
+    Found 32-bit comparator less for signal <new_value$cmp_gt0005> created at line 988.
+    Found 32-bit comparator less for signal <new_value$cmp_gt0006> created at line 1049.
+    Found 32-bit comparator less for signal <new_value$cmp_gt0007> created at line 1058.
+    Found 32-bit 4-to-1 multiplexer for signal <new_value$mux0002> created at line 942.
+    Found 32-bit 4-to-1 multiplexer for signal <new_value$mux0004> created at line 951.
+    Found 32-bit 4-to-1 multiplexer for signal <new_value$mux0007> created at line 977.
+    Found 32-bit 4-to-1 multiplexer for signal <new_value$mux0009> created at line 986.
+    Found 32-bit 4-to-1 multiplexer for signal <new_value$mux0012> created at line 1012.
+    Found 32-bit 4-to-1 multiplexer for signal <new_value$mux0014> created at line 1021.
+    Found 32-bit 4-to-1 multiplexer for signal <new_value$mux0017> created at line 1047.
+    Found 32-bit 4-to-1 multiplexer for signal <new_value$mux0019> created at line 1056.
+    Found 1-bit register for signal <p_1030<0>>.
+    Found 1-bit adder for signal <p_1030_0$add0000> created at line 882.
+    Found 1-bit adder for signal <p_1030_add$addsub0000> created at line 622.
+    Found 1-bit adder for signal <p_1030_add$addsub0001> created at line 630.
+    Found 1-bit subtractor for signal <p_1030_avail$addsub0000> created at line 575.
+    Found 1-bit register for signal <p_1031<0>>.
+    Found 1-bit adder for signal <p_1031_0$add0000> created at line 883.
+    Found 1-bit subtractor for signal <p_1031_avail$addsub0000> created at line 585.
+    Found 1-bit subtractor for signal <p_1031_avail$addsub0001> created at line 621.
+    Found 7-bit comparator greatequal for signal <p_1031_avail$cmp_ge0000> created at line 580.
+    Found 7-bit comparator greatequal for signal <p_1031_avail$cmp_ge0001> created at line 580.
+    Found 1-bit register for signal <p_1032<0>>.
+    Found 1-bit adder for signal <p_1032_0$add0000> created at line 884.
+    Found 1-bit adder for signal <p_1032_add$addsub0000> created at line 640.
+    Found 1-bit subtractor for signal <p_1032_avail$addsub0000> created at line 595.
+    Found 1-bit subtractor for signal <p_1032_avail$addsub0001> created at line 629.
+    Found 1-bit register for signal <p_1033<0>>.
+    Found 1-bit adder for signal <p_1033_0$add0000> created at line 885.
+    Found 1-bit adder for signal <p_1033_add$addsub0000> created at line 648.
+    Found 1-bit subtractor for signal <p_1033_avail$addsub0000> created at line 613.
+    Found 1-bit subtractor for signal <p_1033_avail$addsub0001> created at line 639.
+    Found 1-bit register for signal <p_1039<0>>.
+    Found 1-bit adder for signal <p_1039_0$add0000> created at line 886.
+    Found 1-bit subtractor for signal <p_1039_avail$addsub0000> created at line 603.
+    Found 1-bit subtractor for signal <p_1039_avail$addsub0001> created at line 647.
+    Found 1-bit register for signal <p_1062<0>>.
+    Found 1-bit adder for signal <p_1062_0$add0000> created at line 887.
+    Found 1-bit adder for signal <p_1062_add$addsub0000> created at line 702.
+    Found 1-bit adder for signal <p_1062_add$addsub0001> created at line 710.
+    Found 1-bit subtractor for signal <p_1062_avail$addsub0000> created at line 655.
+    Found 1-bit register for signal <p_1063<0>>.
+    Found 1-bit adder for signal <p_1063_0$add0000> created at line 888.
+    Found 1-bit subtractor for signal <p_1063_avail$addsub0000> created at line 665.
+    Found 1-bit subtractor for signal <p_1063_avail$addsub0001> created at line 701.
+    Found 1-bit register for signal <p_1064<0>>.
+    Found 1-bit adder for signal <p_1064_0$add0000> created at line 889.
+    Found 1-bit adder for signal <p_1064_add$addsub0000> created at line 720.
+    Found 7-bit comparator greatequal for signal <p_1064_add$cmp_ge0000> created at line 660.
+    Found 7-bit comparator greatequal for signal <p_1064_add$cmp_ge0001> created at line 660.
+    Found 1-bit subtractor for signal <p_1064_avail$addsub0000> created at line 675.
+    Found 1-bit subtractor for signal <p_1064_avail$addsub0001> created at line 709.
+    Found 1-bit register for signal <p_1065<0>>.
+    Found 1-bit adder for signal <p_1065_0$add0000> created at line 890.
+    Found 1-bit adder for signal <p_1065_add$addsub0000> created at line 728.
+    Found 1-bit subtractor for signal <p_1065_avail$addsub0000> created at line 693.
+    Found 1-bit subtractor for signal <p_1065_avail$addsub0001> created at line 719.
+    Found 1-bit register for signal <p_1071<0>>.
+    Found 1-bit adder for signal <p_1071_0$add0000> created at line 891.
+    Found 1-bit subtractor for signal <p_1071_avail$addsub0000> created at line 683.
+    Found 1-bit subtractor for signal <p_1071_avail$addsub0001> created at line 727.
+    Found 2-bit register for signal <p_1153>.
+    Found 2-bit adder for signal <p_1153$add0000> created at line 892.
+    Found 2-bit adder for signal <p_1153_add$addsub0000> created at line 783.
+    Found 2-bit comparator greatequal for signal <p_1153_add$cmp_ge0000> created at line 779.
+    Found 2-bit subtractor for signal <p_1153_avail$addsub0000> created at line 745.
+    Found 2-bit subtractor for signal <p_1153_avail$addsub0001> created at line 773.
+    Found 2-bit comparator greatequal for signal <p_1153_avail$cmp_ge0000> created at line 742.
+    Found 2-bit comparator greatequal for signal <p_1153_avail$cmp_ge0001> created at line 770.
+    Found 2-bit register for signal <p_1154>.
+    Found 2-bit adder for signal <p_1154$add0000> created at line 893.
+    Found 2-bit adder for signal <p_1154_add$addsub0000> created at line 791.
+    Found 2-bit subtractor for signal <p_1154_avail$addsub0000> created at line 753.
+    Found 2-bit subtractor for signal <p_1154_avail$addsub0001> created at line 782.
+    Found 2-bit register for signal <p_1155>.
+    Found 2-bit adder for signal <p_1155$add0000> created at line 894.
+    Found 2-bit comparator greatequal for signal <p_1155_add$cmp_ge0000> created at line 750.
+    Found 2-bit subtractor for signal <p_1155_avail$addsub0000> created at line 762.
+    Found 2-bit subtractor for signal <p_1155_avail$addsub0001> created at line 790.
+    Found 2-bit comparator greatequal for signal <p_1155_avail$cmp_ge0000> created at line 758.
+    Found 7-bit comparator greatequal for signal <p_1155_avail$cmp_ge0001> created at line 758.
+    Found 2-bit comparator greatequal for signal <p_1155_avail$cmp_ge0002> created at line 787.
+    Found 2-bit register for signal <p_1193>.
+    Found 2-bit adder for signal <p_1193$add0000> created at line 896.
+    Found 2-bit adder for signal <p_1193_add$addsub0000> created at line 846.
+    Found 2-bit subtractor for signal <p_1193_avail$addsub0000> created at line 808.
+    Found 2-bit subtractor for signal <p_1193_avail$addsub0001> created at line 836.
+    Found 2-bit register for signal <p_1194>.
+    Found 2-bit adder for signal <p_1194$add0000> created at line 897.
+    Found 2-bit adder for signal <p_1194_add$addsub0000> created at line 854.
+    Found 2-bit comparator greatequal for signal <p_1194_add$cmp_ge0000> created at line 805.
+    Found 2-bit comparator greatequal for signal <p_1194_add$cmp_ge0001> created at line 850.
+    Found 2-bit subtractor for signal <p_1194_avail$addsub0000> created at line 816.
+    Found 2-bit subtractor for signal <p_1194_avail$addsub0001> created at line 845.
+    Found 2-bit comparator greatequal for signal <p_1194_avail$cmp_ge0000> created at line 842.
+    Found 2-bit register for signal <p_1195>.
+    Found 2-bit adder for signal <p_1195$add0000> created at line 898.
+    Found 2-bit comparator greatequal for signal <p_1195_add$cmp_ge0000> created at line 813.
+    Found 2-bit subtractor for signal <p_1195_avail$addsub0000> created at line 825.
+    Found 2-bit subtractor for signal <p_1195_avail$addsub0001> created at line 853.
+    Found 1-bit register for signal <p_2<0>>.
+    Found 1-bit adder for signal <p_2_0$add0000> created at line 858.
+    Found 1-bit adder for signal <p_2_add$addsub0000> created at line 462.
+    Found 1-bit adder for signal <p_2_add$addsub0001> created at line 470.
+    Found 1-bit subtractor for signal <p_2_avail$addsub0000> created at line 289.
+    Found 1-bit register for signal <p_3<0>>.
+    Found 1-bit adder for signal <p_3_0$add0000> created at line 859.
+    Found 1-bit subtractor for signal <p_3_avail$addsub0000> created at line 299.
+    Found 1-bit subtractor for signal <p_3_avail$addsub0001> created at line 461.
+    Found 1-bit register for signal <p_5<0>>.
+    Found 1-bit adder for signal <p_5_0$add0000> created at line 860.
+    Found 1-bit adder for signal <p_5_add$addsub0000> created at line 480.
+    Found 1-bit subtractor for signal <p_5_avail$addsub0000> created at line 309.
+    Found 1-bit subtractor for signal <p_5_avail$addsub0001> created at line 469.
+    Found 1-bit register for signal <p_6<0>>.
+    Found 1-bit adder for signal <p_6_0$add0000> created at line 861.
+    Found 1-bit adder for signal <p_6_add$addsub0000> created at line 488.
+    Found 1-bit subtractor for signal <p_6_avail$addsub0000> created at line 453.
+    Found 1-bit subtractor for signal <p_6_avail$addsub0001> created at line 479.
+    Found 7-bit register for signal <p_852>.
+    Found 7-bit adder for signal <p_852$add0000> created at line 864.
+    Found 7-bit adder for signal <p_852_add$add0000> created at line 445.
+    Found 7-bit adder for signal <p_852_add$addsub0000> created at line 552.
+    Found 7-bit adder for signal <p_852_add$addsub0001> created at line 765.
+    Found 7-bit subtractor for signal <p_852_avail$addsub0000> created at line 380.
+    Found 7-bit subtractor for signal <p_852_avail$addsub0001> created at line 507.
+    Found 7-bit subtractor for signal <p_852_avail$addsub0002> created at line 826.
+    Found 7-bit register for signal <p_858>.
+    Found 7-bit adder for signal <p_858$add0000> created at line 865.
+    Found 7-bit adder for signal <p_858_add$addsub0000> created at line 712.
+    Found 7-bit adder for signal <p_858_add$addsub0001> created at line 828.
+    Found 7-bit subtractor for signal <p_858_avail$addsub0000> created at line 443.
+    Found 7-bit subtractor for signal <p_858_avail$addsub0001> created at line 667.
+    Found 7-bit subtractor for signal <p_858_avail$addsub0002> created at line 763.
+    Found 7-bit register for signal <p_871>.
+    Found 7-bit adder for signal <p_871$add0000> created at line 866.
+    Found 7-bit adder for signal <p_871_add$add0000> created at line 418.
+    Found 7-bit adder for signal <p_871_add$addsub0000> created at line 472.
+    Found 7-bit adder for signal <p_871_add$addsub0001> created at line 526.
+    Found 7-bit adder for signal <p_871_add$addsub0002> created at line 775.
+    Found 7-bit adder for signal <p_871_add$addsub0003> created at line 829.
+    Found 7-bit subtractor for signal <p_871_avail$addsub0000> created at line 301.
+    Found 7-bit subtractor for signal <p_871_avail$addsub0001> created at line 392.
+    Found 7-bit subtractor for signal <p_871_avail$addsub0002> created at line 737.
+    Found 7-bit comparator greatequal for signal <p_871_avail$cmp_ge0000> created at line 294.
+    Found 7-bit comparator greatequal for signal <p_871_avail$cmp_ge0001> created at line 294.
+    Found 7-bit comparator greatequal for signal <p_871_avail$cmp_ge0002> created at line 732.
+    Found 7-bit register for signal <p_881>.
+    Found 7-bit adder for signal <p_881$add0000> created at line 867.
+    Found 7-bit adder for signal <p_881_add$addsub0000> created at line 446.
+    Found 7-bit adder for signal <p_881_add$addsub0001> created at line 632.
+    Found 7-bit adder for signal <p_881_add$addsub0002> created at line 685.
+    Found 7-bit adder for signal <p_881_add$addsub0003> created at line 766.
+    Found 7-bit adder for signal <p_881_add$addsub0004> created at line 838.
+    Found 7-bit subtractor for signal <p_881_avail$addsub0000> created at line 329.
+    Found 7-bit subtractor for signal <p_881_avail$addsub0001> created at line 587.
+    Found 7-bit subtractor for signal <p_881_avail$addsub0002> created at line 800.
+    Found 1-bit register for signal <p_889<0>>.
+    Found 1-bit adder for signal <p_889_0$add0000> created at line 868.
+    Found 1-bit adder for signal <p_889_add$addsub0000> created at line 381.
+    Found 1-bit adder for signal <p_889_add$addsub0001> created at line 764.
+    Found 1-bit adder for signal <p_889_add$addsub0002> created at line 774.
+    Found 1-bit subtractor for signal <p_889_avail$addsub0000> created at line 328.
+    Found 1-bit subtractor for signal <p_889_avail$addsub0001> created at line 736.
+    Found 1-bit register for signal <p_890<0>>.
+    Found 1-bit adder for signal <p_890_0$add0000> created at line 869.
+    Found 1-bit adder for signal <p_890_add$addsub0000> created at line 363.
+    Found 7-bit comparator greatequal for signal <p_890_add$cmp_ge0000> created at line 324.
+    Found 1-bit subtractor for signal <p_890_avail$addsub0000> created at line 337.
+    Found 1-bit subtractor for signal <p_890_avail$addsub0001> created at line 353.
+    Found 1-bit register for signal <p_891<0>>.
+    Found 1-bit adder for signal <p_891_0$add0000> created at line 870.
+    Found 1-bit adder for signal <p_891_add$addsub0000> created at line 371.
+    Found 1-bit subtractor for signal <p_891_avail$addsub0000> created at line 345.
+    Found 1-bit subtractor for signal <p_891_avail$addsub0001> created at line 362.
+    Found 2-bit register for signal <p_907>.
+    Found 2-bit adder for signal <p_907$add0000> created at line 871.
+    Found 2-bit subtractor for signal <p_907_avail$addsub0000> created at line 370.
+    Found 2-bit subtractor for signal <p_907_avail$addsub0001> created at line 379.
+    Found 2-bit comparator greatequal for signal <p_907_avail$cmp_ge0000> created at line 367.
+    Found 2-bit comparator greatequal for signal <p_907_avail$cmp_ge0001> created at line 375.
+    Found 7-bit comparator greatequal for signal <p_907_avail$cmp_ge0002> created at line 375.
+    Found 7-bit register for signal <p_91>.
+    Found 7-bit adder for signal <p_91$add0000> created at line 862.
+    Found 1-bit register for signal <p_916<0>>.
+    Found 1-bit adder for signal <p_916_0$add0000> created at line 872.
+    Found 1-bit adder for signal <p_916_add$addsub0000> created at line 444.
+    Found 1-bit adder for signal <p_916_add$addsub0001> created at line 827.
+    Found 1-bit adder for signal <p_916_add$addsub0002> created at line 837.
+    Found 7-bit comparator greatequal for signal <p_916_add$cmp_ge0000> created at line 438.
+    Found 2-bit comparator greatequal for signal <p_916_add$cmp_ge0001> created at line 821.
+    Found 7-bit comparator greatequal for signal <p_916_add$cmp_ge0002> created at line 821.
+    Found 2-bit comparator greatequal for signal <p_916_add$cmp_ge0003> created at line 833.
+    Found 1-bit subtractor for signal <p_916_avail$addsub0000> created at line 391.
+    Found 1-bit subtractor for signal <p_916_avail$addsub0001> created at line 799.
+    Found 7-bit comparator greatequal for signal <p_916_avail$cmp_ge0000> created at line 387.
+    Found 7-bit comparator greatequal for signal <p_916_avail$cmp_ge0001> created at line 795.
+    Found 1-bit register for signal <p_917<0>>.
+    Found 1-bit adder for signal <p_917_0$add0000> created at line 873.
+    Found 1-bit adder for signal <p_917_add$addsub0000> created at line 426.
+    Found 1-bit subtractor for signal <p_917_avail$addsub0000> created at line 400.
+    Found 1-bit subtractor for signal <p_917_avail$addsub0001> created at line 416.
+    Found 1-bit register for signal <p_918<0>>.
+    Found 1-bit adder for signal <p_918_0$add0000> created at line 874.
+    Found 1-bit adder for signal <p_918_add$addsub0000> created at line 434.
+    Found 1-bit subtractor for signal <p_918_avail$addsub0000> created at line 408.
+    Found 1-bit subtractor for signal <p_918_avail$addsub0001> created at line 425.
+    Found 7-bit adder for signal <p_91_add$addsub0000> created at line 605.
+    Found 7-bit adder for signal <p_91_add$addsub0001> created at line 711.
+    Found 7-bit subtractor for signal <p_91_avail$addsub0000> created at line 506.
+    Found 7-bit subtractor for signal <p_91_avail$addsub0001> created at line 666.
+    Found 7-bit comparator greatequal for signal <p_91_avail$cmp_ge0000> created at line 500.
+    Found 7-bit comparator greatequal for signal <p_91_avail$cmp_ge0001> created at line 500.
+    Found 1-bit register for signal <p_924<0>>.
+    Found 1-bit adder for signal <p_924_0$add0000> created at line 875.
+    Found 1-bit subtractor for signal <p_924_avail$addsub0000> created at line 433.
+    Found 1-bit subtractor for signal <p_924_avail$addsub0001> created at line 442.
+    Found 7-bit register for signal <p_93>.
+    Found 7-bit adder for signal <p_93$add0000> created at line 863.
+    Found 7-bit adder for signal <p_93_add$addsub0000> created at line 525.
+    Found 7-bit adder for signal <p_93_add$addsub0001> created at line 631.
+    Found 7-bit adder for signal <p_93_add$addsub0002> created at line 686.
+    Found 7-bit subtractor for signal <p_93_avail$addsub0000> created at line 300.
+    Found 7-bit subtractor for signal <p_93_avail$addsub0001> created at line 586.
+    Found 1-bit register for signal <p_950<0>>.
+    Found 1-bit adder for signal <p_950_0$add0000> created at line 876.
+    Found 1-bit subtractor for signal <p_950_avail$addsub0000> created at line 317.
+    Found 1-bit subtractor for signal <p_950_avail$addsub0001> created at line 487.
+    Found 1-bit register for signal <p_966<0>>.
+    Found 1-bit adder for signal <p_966_0$add0000> created at line 877.
+    Found 1-bit adder for signal <p_966_add$addsub0000> created at line 542.
+    Found 1-bit adder for signal <p_966_add$addsub0001> created at line 550.
+    Found 1-bit subtractor for signal <p_966_avail$addsub0000> created at line 495.
+    Found 1-bit register for signal <p_967<0>>.
+    Found 1-bit adder for signal <p_967_0$add0000> created at line 878.
+    Found 1-bit subtractor for signal <p_967_avail$addsub0000> created at line 505.
+    Found 1-bit subtractor for signal <p_967_avail$addsub0001> created at line 541.
+    Found 1-bit register for signal <p_968<0>>.
+    Found 1-bit adder for signal <p_968_0$add0000> created at line 879.
+    Found 1-bit adder for signal <p_968_add$addsub0000> created at line 560.
+    Found 1-bit subtractor for signal <p_968_avail$addsub0000> created at line 515.
+    Found 1-bit subtractor for signal <p_968_avail$addsub0001> created at line 549.
+    Found 1-bit register for signal <p_969<0>>.
+    Found 1-bit adder for signal <p_969_0$add0000> created at line 880.
+    Found 1-bit adder for signal <p_969_add$addsub0000> created at line 568.
+    Found 1-bit subtractor for signal <p_969_avail$addsub0000> created at line 533.
+    Found 1-bit subtractor for signal <p_969_avail$addsub0001> created at line 559.
+    Found 1-bit register for signal <p_975<0>>.
+    Found 1-bit adder for signal <p_975_0$add0000> created at line 881.
+    Found 1-bit subtractor for signal <p_975_avail$addsub0000> created at line 523.
+    Found 1-bit subtractor for signal <p_975_avail$addsub0001> created at line 567.
+    Found 1-bit register for signal <s_CANC_IN>.
+    Found 32-bit comparator greater for signal <s_CANC_IN$cmp_gt0000> created at line 960.
+    Found 32-bit comparator less for signal <s_CANC_IN$cmp_lt0000> created at line 960.
+    Found 1-bit register for signal <s_CANC_IN_c>.
+    Found 32-bit comparator greater for signal <s_CANC_IN_c$cmp_gt0000> created at line 1030.
+    Found 32-bit comparator less for signal <s_CANC_IN_c$cmp_lt0000> created at line 1030.
+    Found 1-bit register for signal <s_CANC_OUT>.
+    Found 32-bit comparator greater for signal <s_CANC_OUT$cmp_gt0000> created at line 995.
+    Found 32-bit comparator less for signal <s_CANC_OUT$cmp_lt0000> created at line 995.
+    Found 1-bit register for signal <s_CANC_OUT_c>.
+    Found 32-bit comparator greater for signal <s_CANC_OUT_c$cmp_gt0000> created at line 1065.
+    Found 32-bit comparator less for signal <s_CANC_OUT_c$cmp_lt0000> created at line 1065.
+    Found 7-bit register for signal <s_occupied_1>.
+    Found 32-bit comparator greater for signal <s_occupied_1$cmp_gt0000> created at line 1082.
+    Found 32-bit comparator less for signal <s_occupied_1$cmp_lt0000> created at line 1082.
+    Found 7-bit register for signal <s_occupied_2>.
+    Found 32-bit comparator greater for signal <s_occupied_2$cmp_gt0000> created at line 1099.
+    Found 32-bit comparator less for signal <s_occupied_2$cmp_lt0000> created at line 1099.
+    Summary:
+	inferred 110 D-type flip-flop(s).
+	inferred 178 Adder/Subtractor(s).
+	inferred  50 Comparator(s).
+	inferred 256 Multiplexer(s).
+Unit <Parque> synthesized.
+
+
+Synthesizing Unit <Debounce>.
+    Related source file is "/home/sl/Desktop/lab5_park/Debounce .vhd".
+    Found 3-bit register for signal <out_value>.
+    Found 3-bit register for signal <out_sel>.
+    Found 18-bit up counter for signal <r_count1>.
+    Found 18-bit comparator less for signal <r_count1$cmp_lt0000> created at line 55.
+    Found 1-bit xor2 for signal <r_count1$xor0000> created at line 55.
+    Found 18-bit up counter for signal <r_count2>.
+    Found 18-bit comparator less for signal <r_count2$cmp_lt0000> created at line 72.
+    Found 1-bit xor2 for signal <r_count2$xor0000> created at line 72.
+    Found 18-bit up counter for signal <r_count3>.
+    Found 18-bit comparator less for signal <r_count3$cmp_lt0000> created at line 89.
+    Found 1-bit xor2 for signal <r_count3$xor0000> created at line 89.
+    Found 18-bit up counter for signal <r_count4>.
+    Found 18-bit comparator less for signal <r_count4$cmp_lt0000> created at line 106.
+    Found 1-bit xor2 for signal <r_count4$xor0000> created at line 106.
+    Found 18-bit up counter for signal <r_count5>.
+    Found 18-bit comparator less for signal <r_count5$cmp_lt0000> created at line 123.
+    Found 1-bit xor2 for signal <r_count5$xor0000> created at line 123.
+    Found 18-bit up counter for signal <r_count6>.
+    Found 18-bit comparator less for signal <r_count6$cmp_lt0000> created at line 140.
+    Found 1-bit xor2 for signal <r_count6$xor0000> created at line 140.
+    Found 1-bit register for signal <r_state1>.
+    Found 1-bit register for signal <r_state2>.
+    Found 1-bit register for signal <r_state3>.
+    Found 1-bit register for signal <r_state4>.
+    Found 1-bit register for signal <r_state5>.
+    Found 1-bit register for signal <r_state6>.
+    Summary:
+	inferred   6 Counter(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+Unit <Debounce> synthesized.
+
+
+Synthesizing Unit <main>.
+    Related source file is "/home/sl/Desktop/lab5_park/main.vhd".
+WARNING:Xst:647 - Input <enabled> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <temp_CAP_F2<11:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <temp_CAP_F1<11:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <r_switch_6> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <r_switch_5> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <r_switch_4> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <r_switch_3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <r_switch_2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <r_switch_1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <RGBsides> is used but never assigned. This sourceless signal will be automatically connected to value 111.
+WARNING:Xst:653 - Signal <RGBbackground> is used but never assigned. This sourceless signal will be automatically connected to value 000.
+    Found 16x128-bit ROM for signal <number1$mux0001> created at line 185.
+    Found 16x128-bit ROM for signal <number2$mux0001> created at line 198.
+    Found 16x128-bit ROM for signal <number3$mux0001> created at line 211.
+    Found 16x128-bit ROM for signal <number4$mux0001> created at line 224.
+    Found 3-bit register for signal <RGB>.
+    Found 1-bit 6-to-1 multiplexer for signal <ld4>.
+    Found 1-bit 6-to-1 multiplexer for signal <ld3>.
+    Found 1-bit 6-to-1 multiplexer for signal <ld2>.
+    Found 1-bit 6-to-1 multiplexer for signal <ld1>.
+    Found 1-bit 6-to-1 multiplexer for signal <ld0>.
+    Found 1-bit 128-to-1 multiplexer for signal <$varindex0000> created at line 473.
+    Found 1-bit 128-to-1 multiplexer for signal <$varindex0001> created at line 483.
+    Found 1-bit 128-to-1 multiplexer for signal <$varindex0002> created at line 493.
+    Found 1-bit 128-to-1 multiplexer for signal <$varindex0003> created at line 503.
+    Found 1-bit register for signal <AND_X_down>.
+    Found 1-bit register for signal <AND_X_up>.
+    Found 1-bit register for signal <AND_Y_down>.
+    Found 1-bit register for signal <AND_Y_up>.
+    Found 4-bit comparator greater for signal <bcd0_3$cmp_gt0000> created at line 44.
+    Found 4-bit comparator greater for signal <bcd0_3$cmp_gt0001> created at line 44.
+    Found 4-bit comparator greater for signal <bcd0_3$cmp_gt0002> created at line 44.
+    Found 4-bit comparator greater for signal <bcd0_3$cmp_gt0003> created at line 44.
+    Found 4-bit comparator greater for signal <bcd0_3$cmp_gt0004> created at line 44.
+    Found 4-bit adder for signal <bcd0_3_0$add0000> created at line 45.
+    Found 4-bit adder for signal <bcd0_3_0$add0001> created at line 45.
+    Found 4-bit adder for signal <bcd0_3_0$add0002> created at line 45.
+    Found 4-bit adder for signal <bcd0_3_0$add0003> created at line 45.
+    Found 4-bit adder for signal <bcd0_3_0$add0004> created at line 45.
+    Found 4-bit comparator greater for signal <bcd0_7$cmp_gt0000> created at line 48.
+    Found 4-bit comparator greater for signal <bcd0_7$cmp_gt0001> created at line 48.
+    Found 4-bit adder for signal <bcd0_7_4$add0000> created at line 49.
+    Found 4-bit adder for signal <bcd0_7_4$add0001> created at line 49.
+    Found 4-bit comparator greater for signal <bcd_3$cmp_gt0000> created at line 44.
+    Found 4-bit comparator greater for signal <bcd_3$cmp_gt0001> created at line 44.
+    Found 4-bit comparator greater for signal <bcd_3$cmp_gt0002> created at line 44.
+    Found 4-bit comparator greater for signal <bcd_3$cmp_gt0003> created at line 44.
+    Found 4-bit comparator greater for signal <bcd_3$cmp_gt0004> created at line 44.
+    Found 4-bit adder for signal <bcd_3_0$add0000> created at line 45.
+    Found 4-bit adder for signal <bcd_3_0$add0001> created at line 45.
+    Found 4-bit adder for signal <bcd_3_0$add0002> created at line 45.
+    Found 4-bit adder for signal <bcd_3_0$add0003> created at line 45.
+    Found 4-bit adder for signal <bcd_3_0$add0004> created at line 45.
+    Found 4-bit comparator greater for signal <bcd_7$cmp_gt0000> created at line 48.
+    Found 4-bit comparator greater for signal <bcd_7$cmp_gt0001> created at line 48.
+    Found 4-bit adder for signal <bcd_7_4$add0000> created at line 49.
+    Found 4-bit adder for signal <bcd_7_4$add0001> created at line 49.
+    Found 8-bit register for signal <bin_CAP_F1>.
+    Found 8-bit register for signal <bin_CAP_F2>.
+    Found 1-bit register for signal <clk25>.
+    Found 7-bit down counter for signal <count_n1>.
+    Found 10-bit comparator greatequal for signal <count_n1$cmp_ge0000> created at line 468.
+    Found 10-bit comparator greatequal for signal <count_n1$cmp_ge0001> created at line 468.
+    Found 10-bit comparator less for signal <count_n1$cmp_lt0000> created at line 468.
+    Found 10-bit comparator less for signal <count_n1$cmp_lt0001> created at line 468.
+    Found 7-bit down counter for signal <count_n2>.
+    Found 10-bit comparator greatequal for signal <count_n2$cmp_ge0000> created at line 476.
+    Found 10-bit comparator less for signal <count_n2$cmp_lt0000> created at line 476.
+    Found 7-bit down counter for signal <count_n3>.
+    Found 10-bit comparator greatequal for signal <count_n3$cmp_ge0000> created at line 486.
+    Found 10-bit comparator less for signal <count_n3$cmp_lt0000> created at line 486.
+    Found 7-bit down counter for signal <count_n4>.
+    Found 10-bit up counter for signal <counter_hs>.
+    Found 10-bit up counter for signal <counter_vs>.
+    Found 10-bit comparator lessequal for signal <display_enabled$cmp_le0000> created at line 170.
+    Found 10-bit comparator lessequal for signal <display_enabled$cmp_le0001> created at line 170.
+    Found 10-bit comparator greater for signal <HS$cmp_gt0000> created at line 168.
+    Found 10-bit comparator lessequal for signal <HS$cmp_le0000> created at line 168.
+    Found 4-bit register for signal <int_num1>.
+    Found 4-bit register for signal <int_num2>.
+    Found 4-bit register for signal <int_num3>.
+    Found 4-bit register for signal <int_num4>.
+    Found 128-bit register for signal <number1>.
+    Found 128-bit register for signal <number2>.
+    Found 128-bit register for signal <number3>.
+    Found 128-bit register for signal <number4>.
+    Found 1-bit register for signal <PRES1_IN>.
+    Found 1-bit register for signal <PRES1_IN_c>.
+    Found 1-bit register for signal <PRES1_OUT>.
+    Found 1-bit register for signal <PRES1_OUT_c>.
+    Found 1-bit register for signal <PRES2_IN>.
+    Found 1-bit register for signal <PRES2_IN_c>.
+    Found 1-bit register for signal <PRES2_OUT>.
+    Found 1-bit register for signal <PRES2_OUT_c>.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0000> created at line 398.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0001> created at line 399.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0002> created at line 399.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0003> created at line 399.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0004> created at line 403.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0005> created at line 405.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0006> created at line 409.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0007> created at line 420.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0008> created at line 420.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0009> created at line 424.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0010> created at line 426.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0011> created at line 430.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0012> created at line 430.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0013> created at line 434.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0014> created at line 436.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0015> created at line 440.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0016> created at line 446.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0017> created at line 450.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0018> created at line 454.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0019> created at line 458.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0020> created at line 462.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0021> created at line 464.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0022> created at line 468.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0023> created at line 468.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0024> created at line 486.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0000> created at line 398.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0001> created at line 399.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0002> created at line 399.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0003> created at line 399.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0004> created at line 403.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0005> created at line 405.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0006> created at line 409.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0007> created at line 420.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0008> created at line 420.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0009> created at line 424.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0010> created at line 426.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0011> created at line 430.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0012> created at line 440.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0013> created at line 446.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0014> created at line 450.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0015> created at line 454.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0016> created at line 458.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0017> created at line 458.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0018> created at line 464.
+    Found 10-bit comparator less for signal <RGB$cmp_lt0000> created at line 468.
+    Found 10-bit comparator less for signal <RGB$cmp_lt0001> created at line 476.
+    Found 10-bit comparator less for signal <RGB$cmp_lt0002> created at line 486.
+    Found 7-bit comparator greater for signal <RGBnumber1$cmp_gt0000> created at line 374.
+    Found 7-bit comparator greater for signal <RGBnumber3$cmp_gt0000> created at line 376.
+    Found 12-bit register for signal <temp_CAP_F1>.
+    Found 12-bit register for signal <temp_CAP_F2>.
+    Found 1-bit register for signal <TICKET_IN>.
+    Found 1-bit register for signal <TICKET_IN_c>.
+    Found 1-bit register for signal <TICKET_OUT>.
+    Found 1-bit register for signal <TICKET_OUT_c>.
+    Found 10-bit comparator greater for signal <VS$cmp_gt0000> created at line 169.
+    Found 10-bit comparator lessequal for signal <VS$cmp_le0000> created at line 169.
+    Summary:
+	inferred   4 ROM(s).
+	inferred   6 Counter(s).
+	inferred 588 D-type flip-flop(s).
+	inferred  14 Adder/Subtractor(s).
+	inferred  77 Comparator(s).
+	inferred   9 Multiplexer(s).
+Unit <main> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 4
+ 16x128-bit ROM                                        : 4
+# Adders/Subtractors                                   : 192
+ 1-bit adder                                           : 53
+ 1-bit subtractor                                      : 50
+ 2-bit adder                                           : 11
+ 2-bit subtractor                                      : 14
+ 32-bit adder                                          : 8
+ 4-bit adder                                           : 14
+ 7-bit adder                                           : 26
+ 7-bit subtractor                                      : 16
+# Counters                                             : 12
+ 10-bit up counter                                     : 2
+ 18-bit up counter                                     : 6
+ 7-bit down counter                                    : 4
+# Registers                                            : 93
+ 1-bit register                                        : 60
+ 12-bit register                                       : 2
+ 128-bit register                                      : 4
+ 2-bit register                                        : 7
+ 3-bit register                                        : 1
+ 4-bit register                                        : 4
+ 6-bit register                                        : 5
+ 7-bit register                                        : 8
+ 8-bit register                                        : 2
+# Comparators                                          : 133
+ 10-bit comparator greatequal                          : 29
+ 10-bit comparator greater                             : 2
+ 10-bit comparator less                                : 7
+ 10-bit comparator lessequal                           : 23
+ 18-bit comparator less                                : 6
+ 2-bit comparator greatequal                           : 14
+ 32-bit comparator greater                             : 6
+ 32-bit comparator less                                : 14
+ 4-bit comparator greater                              : 14
+ 7-bit comparator greatequal                           : 16
+ 7-bit comparator greater                              : 2
+# Multiplexers                                         : 17
+ 1-bit 128-to-1 multiplexer                            : 4
+ 1-bit 6-to-1 multiplexer                              : 5
+ 32-bit 4-to-1 multiplexer                             : 8
+# Xors                                                 : 6
+ 1-bit xor2                                            : 6
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <p5_4> in Unit <U_Parque> is equivalent to the following FF/Latch, which will be removed : <p5_5> 
+WARNING:Xst:1710 - FF/Latch <p5_4> (without init value) has a constant value of 0 in block <U_Parque>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bin_CAP_F2_7> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bin_CAP_F1_7> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <temp_CAP_F1_8> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <temp_CAP_F1_9> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <temp_CAP_F1_10> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <temp_CAP_F1_11> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <temp_CAP_F2_8> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <temp_CAP_F2_9> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <temp_CAP_F2_10> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <temp_CAP_F2_11> of sequential type is unconnected in block <main>.
+WARNING:Xst:2404 -  FFs/Latches <temp_CAP_F1<11:10>> (without init value) have a constant value of 0 in block <main>.
+WARNING:Xst:2404 -  FFs/Latches <temp_CAP_F2<11:10>> (without init value) have a constant value of 0 in block <main>.
+WARNING:Xst:2404 -  FFs/Latches <p5<5:4>> (without init value) have a constant value of 0 in block <Parque>.
+
+Synthesizing (advanced) Unit <main>.
+INFO:Xst:3045 - The ROM description <Mrom_number1_mux0001> will be implemented on LUTs because the limited number of device block RAMs. If you want to be implemented as block RAM, please select a larger device.
+INFO:Xst:3044 - The ROM <Mrom_number2_mux0001> will be implemented as a read-only BLOCK RAM, absorbing the register: <number2>.
+INFO:Xst:3044 - The ROM <Mrom_number3_mux0001> will be implemented as a read-only BLOCK RAM, absorbing the register: <number3>.
+INFO:Xst:3044 - The ROM <Mrom_number4_mux0001> will be implemented as a read-only BLOCK RAM, absorbing the register: <number4>.
+INFO:Xst:3225 - The RAM <Mrom_number2_mux0001> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 128-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     enA            | connected to signal <clk25>         | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <int_num2>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <number2>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3225 - The RAM <Mrom_number3_mux0001> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 128-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     enA            | connected to signal <clk25>         | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <int_num3>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <number3>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3225 - The RAM <Mrom_number4_mux0001> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 128-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     enA            | connected to signal <clk25>         | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <int_num4>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <number4>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <main> synthesized (advanced).
+WARNING:Xst:2677 - Node <temp_CAP_F1_8> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <temp_CAP_F1_9> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <temp_CAP_F2_8> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <temp_CAP_F2_9> of sequential type is unconnected in block <main>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x128-bit single-port block RAM                      : 3
+# ROMs                                                 : 1
+ 16x128-bit ROM                                        : 1
+# Adders/Subtractors                                   : 188
+ 1-bit adder                                           : 53
+ 1-bit subtractor                                      : 50
+ 2-bit adder                                           : 11
+ 2-bit subtractor                                      : 14
+ 32-bit adder                                          : 4
+ 4-bit adder                                           : 14
+ 7-bit adder                                           : 26
+ 7-bit subtractor                                      : 16
+# Counters                                             : 12
+ 10-bit up counter                                     : 2
+ 18-bit up counter                                     : 6
+ 7-bit down counter                                    : 4
+# Registers                                            : 337
+ Flip-Flops                                            : 337
+# Comparators                                          : 133
+ 10-bit comparator greatequal                          : 29
+ 10-bit comparator greater                             : 2
+ 10-bit comparator less                                : 7
+ 10-bit comparator lessequal                           : 23
+ 18-bit comparator less                                : 6
+ 2-bit comparator greatequal                           : 14
+ 32-bit comparator greater                             : 6
+ 32-bit comparator less                                : 14
+ 4-bit comparator greater                              : 14
+ 7-bit comparator greatequal                           : 16
+ 7-bit comparator greater                              : 2
+# Multiplexers                                         : 17
+ 1-bit 128-to-1 multiplexer                            : 4
+ 1-bit 6-to-1 multiplexer                              : 5
+ 32-bit 4-to-1 multiplexer                             : 8
+# Xors                                                 : 6
+ 1-bit xor2                                            : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <bin_CAP_F1_7> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bin_CAP_F2_7> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2697 - Unit <main> : the RAMs <Mrom_number4_mux0001>, <Mrom_number2_mux0001> are packed into the single block RAM <Mrom_number4_mux00011>
+WARNING:Xst:1293 - FF/Latch <number1_30> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_31> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_32> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_36> has a constant value of 1 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_40> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_48> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_56> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_64> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_72> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_80> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_88> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_96> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_104> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_107> has a constant value of 1 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_112> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_113> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_114> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_115> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_116> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_117> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_118> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_119> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_120> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_121> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_122> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_123> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_124> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_125> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_126> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_127> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_0> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_1> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_2> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_3> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_4> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_5> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_6> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_7> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_8> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_9> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_10> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_11> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_12> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_13> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_14> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_15> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_16> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_17> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_18> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_19> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_20> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_21> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_22> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_23> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_24> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_25> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_26> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_27> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_28> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <number1_29> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <number1_82> in Unit <main> is equivalent to the following 2 FFs/Latches, which will be removed : <number1_90> <number1_98> 
+INFO:Xst:2261 - The FF/Latch <number1_78> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <number1_86> 
+INFO:Xst:2261 - The FF/Latch <number1_87> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <number1_95> 
+INFO:Xst:2261 - The FF/Latch <number1_51> in Unit <main> is equivalent to the following 5 FFs/Latches, which will be removed : <number1_59> <number1_91> <number1_92> <number1_93> <number1_100> 
+INFO:Xst:2261 - The FF/Latch <number1_102> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <number1_109> 
+INFO:Xst:2261 - The FF/Latch <number1_103> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <number1_110> 
+INFO:Xst:2261 - The FF/Latch <number1_105> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <number1_111> 
+INFO:Xst:2261 - The FF/Latch <number1_37> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <number1_108> 
+INFO:Xst:2261 - The FF/Latch <number1_33> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <number1_83> 
+INFO:Xst:2261 - The FF/Latch <number1_41> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <number1_47> 
+INFO:Xst:2261 - The FF/Latch <number1_44> in Unit <main> is equivalent to the following 2 FFs/Latches, which will be removed : <number1_52> <number1_60> 
+INFO:Xst:2261 - The FF/Latch <number1_50> in Unit <main> is equivalent to the following 3 FFs/Latches, which will be removed : <number1_58> <number1_65> <number1_66> 
+INFO:Xst:2261 - The FF/Latch <number1_49> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <number1_57> 
+INFO:Xst:2261 - The FF/Latch <number1_54> in Unit <main> is equivalent to the following 2 FFs/Latches, which will be removed : <number1_55> <number1_62> 
+INFO:Xst:2261 - The FF/Latch <number1_70> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <number1_71> 
+
+Optimizing unit <main> ...
+
+Optimizing unit <Debounce> ...
+
+Optimizing unit <Parque> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 40.
+FlipFlop AND_X_down has been replicated 1 time(s)
+FlipFlop AND_X_up has been replicated 2 time(s)
+FlipFlop AND_Y_down has been replicated 1 time(s)
+FlipFlop AND_Y_up has been replicated 1 time(s)
+FlipFlop U_Parque/p_852_0 has been replicated 1 time(s)
+FlipFlop U_Parque/p_858_0 has been replicated 1 time(s)
+FlipFlop U_Parque/p_858_1 has been replicated 1 time(s)
+FlipFlop U_Parque/p_871_1 has been replicated 1 time(s)
+FlipFlop count_n1_0 has been replicated 2 time(s)
+FlipFlop count_n1_1 has been replicated 1 time(s)
+FlipFlop count_n4_0 has been replicated 4 time(s)
+FlipFlop count_n4_1 has been replicated 2 time(s)
+FlipFlop counter_hs_1 has been replicated 1 time(s)
+FlipFlop counter_hs_2 has been replicated 1 time(s)
+FlipFlop counter_hs_3 has been replicated 1 time(s)
+FlipFlop counter_hs_4 has been replicated 1 time(s)
+FlipFlop counter_hs_5 has been replicated 1 time(s)
+FlipFlop counter_hs_6 has been replicated 1 time(s)
+FlipFlop counter_hs_9 has been replicated 1 time(s)
+FlipFlop counter_vs_2 has been replicated 1 time(s)
+FlipFlop counter_vs_3 has been replicated 1 time(s)
+FlipFlop counter_vs_5 has been replicated 1 time(s)
+FlipFlop counter_vs_6 has been replicated 1 time(s)
+FlipFlop counter_vs_7 has been replicated 1 time(s)
+FlipFlop counter_vs_8 has been replicated 2 time(s)
+FlipFlop counter_vs_9 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <main> :
+	Found 2-bit shift register for signal <int_num1_1>.
+	Found 2-bit shift register for signal <int_num1_3>.
+	Found 3-bit shift register for signal <int_num2<0>>.
+	Found 2-bit shift register for signal <int_num2<2>>.
+	Found 2-bit shift register for signal <int_num3<1>>.
+	Found 2-bit shift register for signal <int_num3<3>>.
+	Found 3-bit shift register for signal <int_num4<0>>.
+	Found 2-bit shift register for signal <int_num4<2>>.
+Unit <main> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 422
+ Flip-Flops                                            : 422
+# Shift Registers                                      : 8
+ 2-bit shift register                                  : 6
+ 3-bit shift register                                  : 2
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : main.ngr
+Top Level Output File Name         : main
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 19
+
+Cell Usage :
+# BELS                             : 2167
+#      GND                         : 9
+#      INV                         : 22
+#      LUT1                        : 36
+#      LUT2                        : 126
+#      LUT2_D                      : 18
+#      LUT2_L                      : 6
+#      LUT3                        : 364
+#      LUT3_D                      : 26
+#      LUT3_L                      : 18
+#      LUT4                        : 672
+#      LUT4_D                      : 71
+#      LUT4_L                      : 61
+#      MUXCY                       : 268
+#      MUXF5                       : 201
+#      MUXF6                       : 57
+#      MUXF7                       : 28
+#      MUXF8                       : 13
+#      VCC                         : 1
+#      XORCY                       : 170
+# FlipFlops/Latches                : 430
+#      FDC                         : 68
+#      FDCE                        : 65
+#      FDE                         : 222
+#      FDP                         : 19
+#      FDPE                        : 37
+#      FDR                         : 11
+#      FDRS                        : 8
+# RAMS                             : 8
+#      RAMB16                      : 8
+# Shift Registers                  : 8
+#      SRL16E                      : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 17
+#      IBUF                        : 7
+#      OBUF                        : 10
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                      779  out of   1920    40%  
+ Number of Slice Flip Flops:            430  out of   3840    11%  
+ Number of 4 input LUTs:               1428  out of   3840    37%  
+    Number used as logic:              1420
+    Number used as Shift registers:       8
+ Number of IOs:                          19
+ Number of bonded IOBs:                  18  out of    173    10%  
+ Number of BRAMs:                         8  out of     12    66%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 446   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+RESET                              | IBUF                   | 189   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 14.729ns (Maximum Frequency: 67.891MHz)
+   Minimum input arrival time before clock: 7.319ns
+   Maximum output required time after clock: 11.635ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 14.729ns (frequency: 67.891MHz)
+  Total number of paths / destination ports: 104739 / 692
+-------------------------------------------------------------------------
+Delay:               14.729ns (Levels of Logic = 9)
+  Source:            counter_vs_5 (FF)
+  Destination:       RGB_0 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: counter_vs_5 to RGB_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            27   0.720   1.892  counter_vs_5 (counter_vs_5)
+     LUT4:I2->O            1   0.551   0.869  RGB_and00283_SW0_SW0 (N485)
+     LUT4:I2->O            9   0.551   1.319  RGB_and00283 (N80)
+     LUT4_D:I1->O          7   0.551   1.405  RGB_and0030 (RGB_and0030)
+     LUT3:I0->O            1   0.551   0.000  RGB_mux0040<0>516_SW1_F (N885)
+     MUXF5:I0->O           1   0.360   0.827  RGB_mux0040<0>516_SW1 (N272)
+     LUT4:I3->O            2   0.551   1.072  RGB_mux0040<0>568_SW1 (N351)
+     LUT4:I1->O            1   0.551   0.827  RGB_mux0040<0>466_SW1 (N448)
+     LUT4:I3->O            1   0.551   0.827  RGB_mux0040<0>618_SW1 (N489)
+     LUT4:I3->O            1   0.551   0.000  RGB_mux0040<0>700 (RGB_mux0040<0>)
+     FDCE:D                    0.203          RGB_0
+    ----------------------------------------
+    Total                     14.729ns (5.691ns logic, 9.038ns route)
+                                       (38.6% logic, 61.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 1300 / 274
+-------------------------------------------------------------------------
+Offset:              7.319ns (Levels of Logic = 2)
+  Source:            RESET (PAD)
+  Destination:       Deb/r_count4_17 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: RESET to Deb/r_count4_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           214   0.821   2.896  RESET_IBUF (RESET_IBUF)
+     INV:I->O            136   0.551   2.449  U_Parque/Reset_inv1_INV_0 (Deb/reset_inv)
+     FDE:CE                    0.602          Deb/r_count3_0
+    ----------------------------------------
+    Total                      7.319ns (1.974ns logic, 5.345ns route)
+                                       (27.0% logic, 73.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 110 / 10
+-------------------------------------------------------------------------
+Offset:              11.635ns (Levels of Logic = 5)
+  Source:            Deb/out_sel_1 (FF)
+  Destination:       ld0 (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: Deb/out_sel_1 to ld0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            16   0.720   1.576  Deb/out_sel_1 (Deb/out_sel_1)
+     LUT3:I0->O            1   0.551   0.000  Mmux_ld0_6 (Mmux_ld0_6)
+     MUXF5:I1->O           2   0.360   1.072  Mmux_ld0_5_f5 (Mmux_ld0_5_f5)
+     LUT4:I1->O            1   0.551   0.000  sg_sel<2>5 (sg_sel<2>4)
+     MUXF5:I0->O           1   0.360   0.801  sg_sel<2>_f5 (ld0_OBUF)
+     OBUF:I->O                 5.644          ld0_OBUF (ld0)
+    ----------------------------------------
+    Total                     11.635ns (8.186ns logic, 3.449ns route)
+                                       (70.4% logic, 29.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 36.00 secs
+Total CPU time to Xst completion: 24.69 secs
+ 
+--> 
+
+
+Total memory usage is 195604 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   96 (   0 filtered)
+Number of infos    :   25 (   0 filtered)
+

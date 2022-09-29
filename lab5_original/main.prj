@@ -1,0 +1,4 @@
+vhdl work "Parque_antigo_controller.vhdl"
+vhdl work "Debounce .vhd"
+vhdl work "binary_to_bcd.vhd"
+vhdl work "main.vhd"
