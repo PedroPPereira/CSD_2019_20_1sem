@@ -12,8 +12,6 @@
 
 **Brief Description:** Implementation of a 2-story parking controller via Petri Nets and a VGA interface (to complement the visual design) using the available Spartan3 FPGA board and the IOPT-Tools software. The car park has 99 spaces available in total, with 2 entrances, 2 exits (1 entrance and 1 exit per floor) and 2 unidirectional ramps to connect the 2 floors. Able to calculate the current occupancy of each floor, enter a floor of a car already inside the car park (ramp) and even deal with unusual situations (use of a ramp in the opposite direction or reversing on the ramp, entry and exit).
 
-**System Features:**
-
 ---
 
 ### Petri Net
