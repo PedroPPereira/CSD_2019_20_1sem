@@ -2,6 +2,8 @@
 
 **Course:** Digital Systems Conception
 
+**Specialty Area:** Digital Systems
+
 **Academic Year:** 2019/20
 
 **Semester:** 1st
