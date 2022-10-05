@@ -1,4 +1,4 @@
-# VGA Car Parking Simulator
+# FPGA VGA Car Parking Simulator
 
 **Course:** Digital Systems Conception
 
